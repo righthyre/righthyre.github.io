@@ -64,7 +64,7 @@
                 </div> 
 				        <li><a href="about-us.html" class="header-label">About Us</a></li>
 			      </ul>
-			      <a class="btn waves-effect waves-light z-depth-4 white-text" style="background: #1a73e8!important; margin:5px 20px 10px 10px; text-transform: unset;" href="#">Contact Us</a>
+			      <a class="btn waves-effect waves-light z-depth-4 white-text modal-trigger" style="background: #1a73e8!important; margin:5px 20px 10px 10px; text-transform: unset;" href="#contactmodal">Contact Us</a>
 		  	  </div>
 		    </div>
 		  </nav>
@@ -95,10 +95,25 @@
 
   <div class="content" style="padding-top:64px;">
 
+  <div id="contactmodal" class="modal">
+    <div class="modal-content center">
+      <h5>Contact <span style="color: #1a73e8;">Dream</span><span style="color: #546e7a;">Jobs.in</span> at </h5>
+      <h6>USA</h6>
+      <a href="tel:+14752661215">+1(475) 266-1215</a><br>
+      <a href="mailto:contact@dreamjobs.in">contact@dreamjobs.in</a><br>
+      <h6>India</h6>
+      <a href="tel:+9118008906607">1800-890-6607</a><br>
+      <a href="mailto:info@dreamjobs.in">info@dreamjobs.in</a>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+
     <section class="wrapper on-demand-recruiter-advise" style="background-color: #f9faf8;" data-section-name="on-demand-recruiter-advise">
       <div class="center" style="padding-top: 2%; padding-bottom: 5%;" data-aos="fade-up">
           <div style="text-align: center; padding-left: 15%; padding-right: 15%">
-            <h2 id="headerContent" style="font-size: 42px; font-weight:500!important;">We match great talent with great companies</h2>
+            <h2 id="headerContent">We match great talent with great companies</h2>
             <p style="text-align: justify;">To compete in today’s competitive, disruptive environment and drive business value requires focusing on talent to ensure that the right employee is matched to the right role that will ultimately create the most value.<br>At Dream Jobs we feel that while talent alignment is challenging, when it’s done right, rapidly and at scale, the outcome can prove to be a significant performance differentiator.<br>Being one of the most experienced recruitment companies in India since 2006, <b>DREAM JOBS STAFFING SOLUTION PVT. LTD.</b> has been able to bring value to multiple clients and partners In India, Singapore, Australia, and other countries in APAC.</p>                    
           </div>
       </div>
@@ -107,7 +122,7 @@
     <section class="wrapper on-demand-recruiter-advise" data-section-name="on-demand-recruiter-advise">
       <div class="center" style="padding-top: 2%; padding-bottom: 5%;" data-aos="fade-up">     
           <div style="text-align: center; padding-left: 15%; padding-right: 15%">
-            <h2 id="headerContent" style="font-size: 42px; font-weight:500!important;">Why should Dream Jobs be your partner of choice?</h2>
+            <h2 id="headerContent">Why should Dream Jobs be your partner of choice?</h2>
             <ul style="text-align: justify;">
                 <li style="list-style-type: disc;">We understand your organization’s ambition and deconstruct what will drive value to the job role you are looking to hire.</li>
                 <li style="list-style-type: disc;">Our state of the art recruitment approach saves time and simplifies the process.</li>
@@ -128,20 +143,24 @@
           <div class="container">
             <div class="row"></div>
             <div class="row center justify">
-              <div class="col l4 s12">
-                <a href="index.html" class="brand-logo-label">
-                  <span style="color: #1a73e8;">dream</span>jobs.in
-                </a>
-                <p>...one step ahead.</p>
+              <div class="col l3 s12">
+                <br>
+                <img src="./images/dream_jobs_logo.png" style="width: 200px" alt="dream jobs.in brand logo">
               </div>
               <div class="col l3 offset-l1 s12">
                 <ul>
+                  <li>USA</li>
+                  <li><a href="tel:+14752661215">+1(475) 266-1215</a></li>
+                  <li><a href="mailto:contact@dreamjobs.in">contact@dreamjobs.in</a></li>
                   <li><a href="#about-dream-jobs.in" class="header-label">About Us</a></li>
                   <li><a href="#why-us" class="header-label">Why Us</a></li>
                 </ul>
               </div>
               <div class="col l3 offset-l1 s12">
                 <ul>
+                  <li>India</li>
+                  <li><a href="tel:+9118008906607">1800-890-6607</li>
+                  <li><a href="mailto:info@dreamjobs.in">info@dreamjobs.in</li>
                   <li><a href="index.html?slide=1" class="header-label">Recruiters On Demand</a></li>
                   <li><a href="index.html?slide=2" class="header-label">Talent Management</a></li>
                   <li><a href="index.html?slide=3" class="header-label">Recruitment & Staffing</a></li>
@@ -152,7 +171,7 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2020 Copyright <span style="color: #1a73e8;">dream</span>jobs</a>.in
+            © Copyright <span style="color: #1a73e8;">dream</span>jobs</a>.in
             </div>
           </div>
 </footer>    
@@ -162,6 +181,8 @@
 	document.addEventListener('DOMContentLoaded', function() {
 	    var sidenavElement = document.querySelectorAll('.sidenav');
 	    var sidenavInstance = M.Sidenav.init(sidenavElement, {});
+      var modalElement = document.querySelectorAll('.modal');
+      var modalInstance = M.Modal.init(modalElement, {});
 
       AOS.init({
         duration: 1200,
@@ -177,7 +198,14 @@
 
   body{
     font-family: 'Lato', 'Noto Sans JP', 'Open Sans' sans-serif;
+    font-size: 18px;
   }
+
+  h2{
+    font-size: 42px;
+    font-weight: 450;
+  }
+
 
   .header-label{
     color: #202124 !important;
@@ -324,6 +352,15 @@
     
     .col-50text {
       padding:1%;
+    }
+
+    body{
+      font-size: 16px;
+    }
+
+    h2{
+      font-size: 33px;
+      font-weight: 450;
     }
   }
 
